@@ -4,6 +4,13 @@ This repo is meant to demonstrate best practices with respect to code health and
 It focuses on python code but includes tools for checking on other types of files. Most
 of the configurations were copied from the EDD repository.
 
+The repo has two simple python modules, *counter.py* and *service.py*, which are meant only
+to illustrate use of the styling and testing approaches and tools.
+
+We would like to keep the styling configs up-to-date so that as many people as possible are
+all using the same styles to improve readability of code across projects. Feel free to 
+contribute suggestions for modifying these configs.
+
 ## Tests
 
 Unit tests for a module are placed in the same directory with the same name plus a _\_test_ suffix.
