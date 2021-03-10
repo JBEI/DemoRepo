@@ -33,6 +33,22 @@ as a library module. We do test this code, which you can see when you inspect th
 ![missing coverage](images/missing_coverage.png)
 
 
+### Testing Notebooks
+
+DemoRepo contains two jupyter notebooks in */notebooks*. This directory also contains a script
+to run the notebooks with *runipy*. To run this script, install runipy:
+
+```pip install runipy```
+
+You can then run the script:
+
+```./run_notebook_tests.sh```
+
+Note that these tests only ensure that the notebooks can execute; they do not test correctness of
+the notebook code.
+
+For demonstration purposes, the directory contains one notebook that succeeds, *WorkingDemoRepoNotebook.ipynb*,
+and one that fails, *FailingDemoRepoNotebook.ipynb*.
 
 ## Pre-commit
 
