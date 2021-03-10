@@ -4,7 +4,7 @@ This repo is meant to demonstrate best practices with respect to code health and
 It focuses on python code but includes tools for checking on other types of files. Most
 of the configurations were copied from the EDD repository.
 
-## Test
+## Tests
 
 Unit tests for a module are placed in the same directory with the same name plus a _\_test_ suffix.
 So unit tests are easy to find and run for any given module.
