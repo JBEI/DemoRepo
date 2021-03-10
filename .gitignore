@@ -26,6 +26,8 @@ settings/*
 **/uploads
 # and ignore local log directory
 **/log
+# and generated coverage reports
+**/htmlcov
 
 # ignore typescript generated files in mounted code folders
 **/main/static/dist
