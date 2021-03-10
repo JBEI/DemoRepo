@@ -26,6 +26,14 @@ detailed description of the coverage. You can access this by running:
 
 ```open htmlcov/index.html```
 
+This can be very useful for inspecting uncovered parts of the code. For example, in this repo we 
+adopt a style that all python should have an executable main(), even if it is intended to be used
+as a library module. We do test this code, which you can see when you inspect the coverage details:
+
+![missing coverage](images/missing_coverage.png)
+
+
+
 ## Pre-commit
 
 Setting up pre-commit is fairly straightforward. This repo includes a _.pre-commit-config.yaml_ file
