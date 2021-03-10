@@ -1,11 +1,12 @@
 #!/usr/bin/python
 
-class Counter(object):
+
+class Counter:
     """Simple counter for demonstrating tests."""
 
     def __init__(self):
         """Set up counter."""
-        self._count = 0 
+        self._count = 0
 
     def increment(self):
         """Increments the  count."""
@@ -15,8 +16,10 @@ class Counter(object):
         """Returns the count."""
         return self._count
 
+
 def main():
-  print("Meant to be used as a library.")
+    print("Meant to be used as a library.")
+
 
 if __name__ == "__main__":
-  main()
+    main()

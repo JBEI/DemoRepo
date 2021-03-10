@@ -2,11 +2,14 @@
 
 from counter import Counter
 
+
 class ServiceException(Exception):
     """Basic exception for the Service class."""
+
     pass
 
-class Service(object):
+
+class Service:
     """Simple service that uses the Counter class."""
 
     def __init__(self):
@@ -31,8 +34,10 @@ class Service(object):
         """Failing service call."""
         raise ServiceException("Failed call.")
 
+
 def main():
-  print("Meant to be used as a library.")
+    print("Meant to be used as a library.")
+
 
 if __name__ == "__main__":
-  main()
+    main()
