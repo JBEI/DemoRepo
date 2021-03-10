@@ -5,16 +5,13 @@ import setuptools
 setuptools.setup(
     name="DemoRepo",
     version="0.1",
-    description="An example repository that describes how to set up basic tools for good code health.",
+    description="An example repository that describes how to set up basic tools"
+    " for good code health.",
     author="Bret Peterson",
     author_email="bretpeterson@lbl.gov",
     url="https://github.com/JBEI/DemoRemo",
     packages=setuptools.find_packages(),
-    install_requires=[
-        "ipython",
-        "mock",
-        "pytest",
-    ],
+    install_requires=["ipython", "mock", "pytest"],
     classifiers=[
         "Intended Audience :: Developers",
         "Intended Audience :: Science/Research/Development",
@@ -22,6 +19,6 @@ setuptools.setup(
         "Intended Audience :: Application",
         "Natural Language :: English",
         "Operating System :: OS Independent",
-        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.8",
     ],
 )
