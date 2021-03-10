@@ -14,6 +14,18 @@ Integration tests, those which involve use of multiple modules, are placed in th
 We do not provide example end-to-end tests for this repo, but they would also have their own directory
 and would run in the context of a non-production service (_eg_ a _staging_ or _dev_ service).
 
+### Test Coverage
+
+Install the test coverage tool:
+
+```pip install coverage```
+
+This tool is called in the _run_all_tests.sh_ script. It will show you a text description of the
+coverage if the tests all pass, and it will generate a directory of html that gives a more
+detailed description of the coverage. You can access this by running:
+
+```open htmlcov/index.html```
+
 ## Pre-commit
 
 Setting up pre-commit is fairly straightforward. This repo includes a _.pre-commit-config.yaml_ file
