@@ -21,6 +21,11 @@ Integration tests, those which involve use of multiple modules, are placed in th
 We do not provide example end-to-end tests for this repo, but they would also have their own directory
 and would run in the context of a non-production service (_eg_ a _staging_ or _dev_ service).
 
+This repo is designated as a template so that you can create a new repo based on this one. If you do, then
+you can remove the notebooks in */notebooks/* and the python files in */demo_repo/* and */demo_repo/integration_tests/*.
+You can then rename the */demo_repo/* directory to the name of your repo. After updating the markdown files,
+you should be ready to go with all of the presubmit and testing scripts and configs in place.
+
 ### Test Coverage
 
 Install the test coverage tool:
