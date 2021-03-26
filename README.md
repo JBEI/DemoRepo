@@ -18,8 +18,9 @@ you should be ready to go with all of the presubmit and testing scripts and conf
 
 ## Tests
 
-Unit tests for a module are placed in the same directory with the same name plus a _\_test_ suffix.
-So unit tests are easy to find and run for any given module.
+Unit tests for a module are placed in the same directory with the same name plus a _\_test_ suffix. This
+makes unit tests easy to find and run for any given module and also makes obvious which modules do not
+have unit tests.
 
 Integration tests, those which involve use of multiple modules, are placed in their own directory.
 
@@ -40,7 +41,7 @@ detailed description of the coverage. You can access this by running:
 
 This can be very useful for inspecting uncovered parts of the code. For example, in this repo we 
 adopt a style that all python should have an executable main(), even if it is intended to be used
-as a library module. We do test this code, which you can see when you inspect the coverage details:
+as a library module. We do _not_ test this code, which you can see when you inspect the coverage details:
 
 ![missing coverage](images/missing_coverage.png)
 
@@ -76,7 +77,7 @@ You can then install the pre-commit script in git by running:
 
 ```pre-commit install```
 
-If you have a _.pre-commit-config.yaml_ file in your rep, you will notice differences in your next commit.
+If you have a _.pre-commit-config.yaml_ file in your repo, you will notice differences in your next commit.
 The tools specified in _.pre-commit-config.yaml_ will run and will block the commit if any
 errors are found. It may be helpful to run the tools directly when you are trying to fix these errors.
 
