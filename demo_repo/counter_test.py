@@ -12,7 +12,7 @@ def test_new_counter(counter):
     assert counter.get_count() == 0
 
 
-def tests_inctrement(counter):
+def tests_increment(counter):
     """Tests state after counter is incremented."""
     counter.increment()
     assert counter.get_count() == 1
