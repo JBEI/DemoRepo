@@ -1,5 +1,6 @@
 import pytest
-from counter import Counter
+
+from demo_repo.counter import Counter
 
 
 @pytest.fixture(scope="function")

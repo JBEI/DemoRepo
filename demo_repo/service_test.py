@@ -1,6 +1,7 @@
 import mock
 import pytest
-from service import Service, ServiceException
+
+from demo_repo.service import Service, ServiceException
 
 
 def test_new_service():
@@ -9,7 +10,7 @@ def test_new_service():
     assert service.num_calls() == (0, 0)
 
 
-@mock.patch("counter.Counter.increment", return_value=None)
+@mock.patch("demo_repo.counter.Counter.increment", return_value=None)
 def test_service1(increment_method):
     """Tests calls to service 1 increments counts."""
     service = Service()
@@ -17,7 +18,7 @@ def test_service1(increment_method):
     increment_method.assert_called_once_with()
 
 
-@mock.patch("counter.Counter.increment", return_value=None)
+@mock.patch("demo_repo.counter.Counter.increment", return_value=None)
 def test_service2(increment_method):
     """Tests calls to service 2 increments counts."""
     service = Service()
@@ -25,7 +26,7 @@ def test_service2(increment_method):
     increment_method.assert_called_once_with()
 
 
-@mock.patch("counter.Counter.get_count", return_value=1)
+@mock.patch("demo_repo.counter.Counter.get_count", return_value=1)
 def test_num_calls(get_count):
     """Tests calls to get number of service calls."""
     service = Service()

@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-from counter import Counter
+from .counter import Counter
 
 
 class ServiceException(Exception):

@@ -1,4 +1,4 @@
-from ..service import Service
+from demo_repo.service import Service
 
 
 def test_service_call_counts():
