@@ -1,13 +1,5 @@
 #!/usr/bin/python
 
-import os
-import sys
-
-
-def test():
-    print(len(sys.argv))
-    print(len(os.listdir()))
-
 
 class Counter:
     """Simple counter for demonstrating tests."""
