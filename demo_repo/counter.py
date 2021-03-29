@@ -6,7 +6,7 @@ class Counter:
 
     def __init__(self):
         """Set up counter."""
-        self._count = 0
+        self._count = 1
 
     def increment(self):
         """Increments the  count."""
