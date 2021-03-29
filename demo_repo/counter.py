@@ -16,9 +16,6 @@ class Counter:
         """Returns the count."""
         return self._count
 
-    def reset(self):
-        self._count = 0
-
 
 def main():
     print("Meant to be used as a library.")
