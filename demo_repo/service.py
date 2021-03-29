@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-from .counter import Counter
+from demo_repo.counter import Counter
 
 
 class ServiceException(Exception):
