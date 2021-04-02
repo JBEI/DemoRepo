@@ -99,3 +99,6 @@ may have to make fixes by hand.
 
 ```flake8 myfile.py```
 
+Note that there are some helpful tips on using pre-commit in different ways on
+the [ART Install page](https://github.com/JBEI/AutomatedRecommendationTool/blob/master/docs/Installing.md).
+
