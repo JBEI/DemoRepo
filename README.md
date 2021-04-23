@@ -1,5 +1,7 @@
 # DemoRepo
 
+[![codecov](https://codecov.io/gh/JBEI/DemoRepo/branch/main/graph/badge.svg?token=ZOXSD5WM3G)](https://codecov.io/gh/JBEI/DemoRepo)
+
 This repo is meant to demonstrate best practices with respect to code health and shareability.
 It focuses on python code but includes tools for checking on other types of files. Most
 of the configurations were copied from the EDD repository.
