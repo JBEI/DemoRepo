@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 set -e -x
 
 # Run all tests and calculate coverage.
@@ -7,4 +7,4 @@ coverage html
 coverage report
 
 # Upload code coverage to CodeCov.
-bash < (curl -s https://codecov.io/bash)
+bash <(curl -s https://codecov.io/bash)
