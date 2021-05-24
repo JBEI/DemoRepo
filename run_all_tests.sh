@@ -5,3 +5,6 @@ set -e -x
 coverage run --source=. -m pytest
 coverage html
 coverage report
+
+# Upload code coverage to CodeCov.
+bash < (curl -s https://codecov.io/bash)
