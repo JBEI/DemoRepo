@@ -113,9 +113,9 @@ Follow the steps below to create a new repo using DemoRepo as a template:
 5. Remove the python files in */demo_repo/* and */demo_repo/integration_tests/*.
 6. Rename the */demo_repo/* source directory to the name of your repo. Update the directory name in *run_all_tests.sh*.
 7. Modify *setup.py* as needed for your repo.
-8. Go to [https://codecov.io/gh/JBEI] and add your new repo.
+8. Go to [CodeCov repository page](https://codecov.io/gh/JBEI) and add your new repo.
 9. Go to the *Settings* your repo in CodeCov and copy the *Repository Upload Token*. Edit the *codecov.yml* file in your local repo and replace the token with the one you copied.
-10. Update the markdown README file for your repo.
+10. Update the markdown README file for your repo. Note that you will want to get a new code coverage badge which is available in *Settings* under the *Badge* section (left-hand panel). For example, the link to the badge for the DemoRepo project is available [here](https://app.codecov.io/gh/JBEI/DemoRepo/settings/badge).
 11. Double check set up instructions in the DemoRepo README to ensure that pre-commit is ready to go.
 
 
