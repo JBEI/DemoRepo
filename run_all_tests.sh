@@ -8,3 +8,8 @@ coverage report
 
 # Upload code coverage to CodeCov.
 bash <(curl -s https://codecov.io/bash)
+
+# Check notebooks.
+pushd notebooks
+./run_notebook_tests.sh
+popd
