@@ -13,10 +13,8 @@ We would like to keep the styling configs up-to-date so that as many people as p
 all using the same styles to improve readability of code across projects. Feel free to 
 contribute suggestions for modifying these configs.
 
-This repo is designated as a template so that you can create a new repo based on this one. If you do, then
-you can remove the notebooks in */notebooks/* and the python files in */demo_repo/* and */demo_repo/integration_tests/*.
-You can then rename the */demo_repo/* directory to the name of your repo. After updating the markdown files,
-you should be ready to go with all of the presubmit and testing scripts and configs in place.
+This repo is designated as a template so that you can create a new repo based on this one. See the *Using
+DemoRepo as a Template* section below to get more info on this process.
 
 ## Tests
 
@@ -103,4 +101,21 @@ may have to make fixes by hand.
 
 Note that there are some helpful tips on using pre-commit in different ways on
 the [ART Install page](https://github.com/JBEI/AutomatedRecommendationTool/blob/master/docs/Installing.md).
+
+## Using DemoRepo as a Template
+
+Follow the steps below to create a new repo using DemoRepo as a template:
+
+1. Go to the [DemoRepo GitHub page](https://github.com/JBEI/DemoRepo) and click the *Use this template* button. Pick a name for your new template and create it.
+2. Clone the new repo for editing.
+3. Remove the notebooks in */notebooks/*.
+4. Remove the images in */images/*.
+5. Remove the python files in */demo_repo/* and */demo_repo/integration_tests/*.
+6. Rename the */demo_repo/* source directory to the name of your repo. Update the directory name in *run_all_tests.sh*.
+7. Modify *setup.py* as needed for your repo.
+8. Go to [CodeCov repository page](https://codecov.io/gh/JBEI) and add your new repo.
+9. Go to the *Settings* your repo in CodeCov and copy the *Repository Upload Token*. Edit the *codecov.yml* file in your local repo and replace the token with the one you copied.
+10. Update the markdown README file for your repo. Note that you will want to get a new code coverage badge which is available in *Settings* under the *Badge* section (left-hand panel). For example, the link to the badge for the DemoRepo project is available [here](https://app.codecov.io/gh/JBEI/DemoRepo/settings/badge).
+11. Double check set up instructions in the DemoRepo README to ensure that pre-commit is ready to go.
+
 
