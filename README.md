@@ -45,10 +45,6 @@ as a library module. We do _not_ test this code, which you can see when you insp
 
 ![missing coverage](images/missing_coverage.png)
 
-### Automated Documentation
-
-A [separate document](https://docs.google.com/document/d/1xT5Ay4Ua7F5cX_-tG9iEuOd7B0yTREuAh47GkKAlZt8/edit) is available describing how to set up Sphinx for auto-generation of documents for this project. The steps should be comparable for any project using this project as a template.
-
 ### Testing Notebooks
 
 DemoRepo contains two jupyter notebooks in */notebooks*. This directory also contains a script
@@ -104,6 +100,10 @@ may have to make fixes by hand.
 
 Note that there are some helpful tips on using pre-commit in different ways on
 the [ART Install page](https://github.com/JBEI/AutomatedRecommendationTool/blob/master/docs/Installing.md).
+
+## Automated Documentation
+
+A [separate document](https://docs.google.com/document/d/1xT5Ay4Ua7F5cX_-tG9iEuOd7B0yTREuAh47GkKAlZt8/edit) is available describing how to set up Sphinx for auto-generation of documents for this project. The steps should be comparable for any project using this project as a template.
 
 ## Using DemoRepo as a Template
 
