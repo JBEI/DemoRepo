@@ -23,15 +23,43 @@ See the _Using DemoRepo as a Template_ section below to get more info on this pr
 
 ## Tests
 
+### Unit tests
+
 Unit tests for a module are placed in the same directory with the same name plus a _\_test_ suffix.
-This makes unit tests easy to find and run for any given module and also makes obvious which
+This makes unit tests easy to find and run for any given module, and also makes obvious which
 modules do not have unit tests.
+
+### Other tests
 
 Integration tests, those which involve use of multiple modules, are placed in their own directory.
 
 We do not provide example end-to-end tests for this repo, but they would also have their own
 directory and would run in the context of a non-production service (_eg_ a _staging_ or _dev_
 service).
+
+### Large projects
+
+For large projects with ~4 or more modules, co-locating tests with code doubles the number of
+modules per directory, and makes code harder to find. For large projects, place all tests (unit
+and other) under a _tests/_ subdirectory, and name modules with a _test\__ prefix instead of
+suffix. The _test\__ prefix helps to distinguish tests from code in hierarchical file views.
+For example, a directory structure might look like the following:
+
+    module_1.py
+    module_2.py
+    module_3.py
+    module_4.py
+    tests/
+        end_to_end/
+        integration/
+        unit/
+            test_module_1.py
+            test_module_2.py
+            test_module_3.py
+            test_module_4.py
+
+In this example, placing unit tests under a `tests/unit/` subdirectory makes it simple to run them
+separately from other tests that may take longer.
 
 ### Test Coverage
 
