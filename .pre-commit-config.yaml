@@ -42,5 +42,3 @@ repos:
     rev: "v2.6.2"
     hooks:
       - id: prettier
-default_language_version:
-  python: python3.9

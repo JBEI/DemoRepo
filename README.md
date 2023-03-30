@@ -26,14 +26,33 @@ Integration tests, those which involve use of multiple modules, are placed in th
 We do not provide example end-to-end tests for this repo, but they would also have their own directory
 and would run in the context of a non-production service (_eg_ a _staging_ or _dev_ service).
 
+### Install poetry
+
+Poetry is emerging as the de-facto standard tool for managing Python dependencies.  There are many
+options for using `poetry`, but examples here assume you'll use it to create and manage a virtual
+environment (aka virtualenv) specific to your project.  Virtual environments help prevent 
+conflicting Python dependencies interfering with one another, e.g. if you work on multiple projects 
+on the same computer.
+
+1.  [Install poetry][https://python-poetry.org/docs/]
+2. Install the [poetry-dynamic-versioning][https://github.
+   com/mtkennerly/poetry-dynamic-versioning] plugin
+3. Create a virtualenv for this project (run from the repo base directory)
+    `poetry install --with dev`
+4. Open a shell in the virtualenv
+    This enables you to use Python dependencies installed by poetry.
+    ```
+   poetry shell # CRTL-D to exit when finished
+    ```
+
 ### Test Coverage
 
-Install the test coverage tool:
+Activate the poetry virtualenv to use the installed Python packages.
 
-```pip install coverage```
+```poetry shell```
 
-This tool is called in the _run_all_tests.sh_ script. It will show you a text description of the
-coverage if the tests all pass, and it will generate a directory of html that gives a more
+The coverage tool is called in the _run_all_tests.sh_ script. It will show you a text description 
+of the coverage if the tests all pass, and it will generate a directory of html that gives a more
 detailed description of the coverage. You can access this by running:
 
 ```open htmlcov/index.html```
@@ -47,13 +66,16 @@ as a library module. We do _not_ test this code, which you can see when you insp
 ### Testing Notebooks
 
 DemoRepo contains two jupyter notebooks in */notebooks*. This directory also contains a script
-to run the notebooks with *runipy*. To run this script, install runipy:
+to run the notebooks with *runipy*. To run this script, first activate the poetry virtualenv:
 
-```pip install runipy```
+```poetry shell```
 
 You can then run the script:
 
-```./run_notebook_tests.sh```
+```
+cd notebooks
+./run_notebook_tests.sh
+```
 
 Note that these tests only ensure that the notebooks can execute; they do not test correctness of
 the notebook code.
@@ -78,6 +100,8 @@ You can then install the pre-commit script in your local repo by running:
 If you have a _.pre-commit-config.yaml_ file in your repo, you will notice differences in your next commit.
 The tools specified in _.pre-commit-config.yaml_ will run and will block the commit if any
 errors are found. It may be helpful to run the tools directly when you are trying to fix these errors.
+Pre-commit runs the same checks as the GitHub continuous integration, so running it at commit 
+time helps you to catch errors earlier in the process.
 
 ### Running Black and Flake8
 
@@ -96,7 +120,7 @@ may have to make fixes by hand.
 
 ### Advanced use
 
-See [Advanced.md][Advanced.md] for examples that may be helpful for advanced use.
+See [Advanced.md](Advanced.md) for examples that may be helpful for advanced use.
 
 ## Automated Documentation
 
@@ -112,10 +136,12 @@ Follow the steps below to create a new repo using DemoRepo as a template:
 4. Remove the images in */images/*.
 5. Remove the python files in */demo_repo/* and */demo_repo/integration_tests/*.
 6. Rename the */demo_repo/* source directory to the name of your repo. Update the directory name in *run_all_tests.sh*.
-7. Modify *setup.py* as needed for your repo.
-8. Go to [CodeCov repository page](https://codecov.io/gh/JBEI) and add your new repo.
-9. Go to the *Settings* your repo in CodeCov and copy the *Repository Upload Token*. Edit the *codecov.yml* file in your local repo and replace the token with the one you copied.
-10. Update the markdown README file for your repo. Note that you will want to get a new code coverage badge which is available in *Settings* under the *Badge* section (left-hand panel). For example, the link to the badge for the DemoRepo project is available [here](https://app.codecov.io/gh/JBEI/DemoRepo/settings/badge).
-11. Double check set up instructions in the DemoRepo README to ensure that pre-commit is ready to go.
-
-
+7. Modify *pyproject.toml* as needed for your repo.
+8. Run `poetry lock` to lock Python dependencies based on *pyproject.toml*
+9. Go to [CodeCov repository page](https://codecov.io/gh/JBEI) and add your new repo.
+10. Go to the *Settings* your repo in CodeCov and copy the *Repository Upload Token*. Edit the 
+   *codecov.yml* file in your local repo and replace the token with the one you copied.
+11. Update the markdown README file for your repo. Note that you will want to get a new code 
+    coverage badge which is available in *Settings* under the *Badge* section (left-hand panel). For example, the link to the badge for the DemoRepo project is available [here](https://app.codecov.io/gh/JBEI/DemoRepo/settings/badge).
+12. Double check set up instructions in the DemoRepo README to ensure that pre-commit is ready 
+    to go.
